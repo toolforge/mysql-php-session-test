@@ -44,7 +44,7 @@ restore_error_handler();
 
 // Open database connection
 $dbcreds = Utils::mysqlCredentials();
-$dbconn = new mysqli(
+$dbconn = new \mysqli(
 	'tools.labsdb',
 	$creds['user'],
 	$creds['password'],
