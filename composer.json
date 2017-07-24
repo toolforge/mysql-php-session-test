@@ -1,0 +1,36 @@
+{
+    "name": "bd808/tool-mysql-php-session-test",
+    "type": "project",
+    "license": "MIT",
+    "homepage": "https://tools.wmflabs.org/mysql-php-session-test/",
+    "authors": [
+        {
+            "name": "Bryan Davis",
+            "email": "bd808@wikimedia.org"
+        }
+    ],
+    "require": {
+        "jamiecressey/php-mysql-session-handler": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bd808\\Mpst\\": "src/"
+        }
+    },
+    "require-dev": {
+        "jakub-onderka/php-parallel-lint": "~0.9",
+        "mediawiki/mediawiki-codesniffer": "~0.10"
+    },
+    "scripts": {
+        "fix": "phpcbf",
+        "test": [
+            "parallel-lint . --exclude vendor",
+            "phpcs -p"
+        ]
+    },
+    "config": {
+        "autoloader-suffix": "_mpst",
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    }
+}
