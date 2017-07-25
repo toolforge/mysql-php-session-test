@@ -23,6 +23,8 @@
  */
 namespace Bd808\Mpst;
 
+use Bd808\Toolforge\Mysql\SessionHandler;
+
 if ( !defined( 'APP_ROOT' ) ) {
 	define( 'APP_ROOT', dirname( __DIR__ ) );
 }
@@ -42,22 +44,8 @@ try {
 }
 restore_error_handler();
 
-// Open database connection
-$dbcreds = Utils::mysqlCredentials();
-$dbconn = new \mysqli(
-	'tools.labsdb',
-	$creds['user'],
-	$creds['password'],
-	$creds['user'] . '__sessions'
-);
-if ( $dbconn->connect_error ) {
-	die( "Connection failed: {$dbconn->connect_error}" );
-}
-
 // Setup sessions via mysql storage
-$sessionHandler = new \JamieCressey\SessionHandler\SessionHandler();
-$sessionHandler->setDbConnection( $dbconn );
-$sessionHandler->setDbTable( 'sessions' );
+$sessionHandler = new SessionHandler();
 session_set_save_handler( $sessionHandler, true );
 
 session_name( 'mpst_s' );

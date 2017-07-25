@@ -9,13 +9,14 @@
             "email": "bd808@wikimedia.org"
         }
     ],
-    "require": {
-        "jamiecressey/php-mysql-session-handler": "dev-master"
-    },
-    "autoload": {
-        "psr-4": {
-            "Bd808\\Mpst\\": "src/"
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/bd808/toolforge-php-mysql"
         }
+    ],
+    "require": {
+        "bd808/toolforge-mysql": "dev-master"
     },
     "require-dev": {
         "jakub-onderka/php-parallel-lint": "~0.9",
