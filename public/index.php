@@ -78,3 +78,8 @@ echo 'Now: ', $now, "\n";
 echo 'Session id: ', session_id(), "\n";
 echo 'Last visit: ', $_SESSION['last'], "\n";
 $_SESSION['last'] = $now;
+
+echo "\n\n";
+echo str_repeat( '-', 70 ), "\n";
+echo "src: https://phabricator.wikimedia.org/source/tool-mysql-php-session-test/\n";
+echo "license: MIT\n";
