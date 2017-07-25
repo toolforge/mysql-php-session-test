@@ -47,15 +47,34 @@ restore_error_handler();
 // Setup sessions via mysql storage
 $sessionHandler = new SessionHandler();
 session_set_save_handler( $sessionHandler, true );
+session_register_shutdown();
+
+// Session cookies only live until the browser closes
+ini_set( 'session.cookie_lifetime', 0 );
+// Only accept session id from cookie
+ini_set( 'session.use_cookies', true );
+ini_set( 'session.use_only_cookies', true );
+ini_set( 'session.use_strict_mode', true );
+ini_set( 'session.use_trans_sid', false );
+// Use long session ids
+ini_set( 'session.hash_function', 'sha256' );
+ini_set( 'session.hash_bits_per_character', 6 );
+// Don't cache pages where sessions are in use
+ini_set( 'session.cache_limiter', 'nocache' );
+// Sessions are eligible for cleanup after this many seconds
+ini_set( 'session.gc_maxlifetime', 60*60*24 );
+// Restrict session cookie to this tool over https
+ini_set( 'session.cookie_path', '/mysql-php-session-test' );
+ini_set( 'session.cookie_domain', 'tools.wmflabs.org' );
+ini_set( 'session.cookie_secure', true );
+ini_set( 'session.cookie_httponly', true );
 
 session_name( 'mpst_s' );
-session_set_cookie_params(
-	60*60*24*30, '/mysql-php-session-test', 'tools.wmflabs.org', true, true );
 session_start();
 
-header( 'Content-Type: text/plain' );
-echo 'Session id: ' . session_id();
-echo "Last visit: {$_SESSION['last']}";
-$_SESSION['last'] = date();
-
-$dbconn->close();
+header( 'Content-Type: text/plain; charset=utf-8' );
+$now = time();
+echo 'Now: ', $now, "\n";
+echo 'Session id: ', session_id(), "\n";
+echo 'Last visit: ', $_SESSION['last'], "\n";
+$_SESSION['last'] = $now;
