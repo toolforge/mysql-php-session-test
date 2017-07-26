@@ -52,7 +52,7 @@ header( 'Content-Type: text/plain; charset=utf-8' );
 $now = time();
 echo 'Now: ', $now, "\n";
 echo 'Session id: ', session_id(), "\n";
-echo 'Last visit: ', $_SESSION['last'], "\n";
+echo 'Last visit: ', isset( $_SESSION['last'] ) ? $_SESSION['last'] : 0, "\n";
 $_SESSION['last'] = $now;
 
 echo "\n\n";
