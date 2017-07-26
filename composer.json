@@ -9,14 +9,8 @@
             "email": "bd808@wikimedia.org"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/bd808/toolforge-php-mysql"
-        }
-    ],
     "require": {
-        "bd808/toolforge-mysql": "dev-master"
+        "bd808/toolforge-mysql": "~1.0"
     },
     "require-dev": {
         "jakub-onderka/php-parallel-lint": "~0.9",

@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c930855fdae375d2723704214c27813",
+    "content-hash": "a8851e9161ba5d84fef2aeba0710ac3a",
     "packages": [
         {
             "name": "bd808/toolforge-mysql",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bd808/toolforge-php-mysql.git",
@@ -543,9 +543,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "bd808/toolforge-mysql": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
