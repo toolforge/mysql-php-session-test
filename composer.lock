@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bd808/toolforge-php-mysql.git",
-                "reference": "971ae5f5ff5662a1caeb777d07c6e0993a669084"
+                "reference": "30db81d3a0c060ee5528f7656a75356cb308a126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bd808/toolforge-php-mysql/zipball/971ae5f5ff5662a1caeb777d07c6e0993a669084",
-                "reference": "971ae5f5ff5662a1caeb777d07c6e0993a669084",
+                "url": "https://api.github.com/repos/bd808/toolforge-php-mysql/zipball/30db81d3a0c060ee5528f7656a75356cb308a126",
+                "reference": "30db81d3a0c060ee5528f7656a75356cb308a126",
                 "shasum": ""
             },
             "require": {
@@ -59,7 +59,7 @@
                 "source": "https://github.com/bd808/toolforge-php-mysql/tree/master",
                 "issues": "https://github.com/bd808/toolforge-php-mysql/issues"
             },
-            "time": "2017-07-26T00:55:19+00:00"
+            "time": "2017-07-26T01:01:06+00:00"
         },
         {
             "name": "psr/log",
