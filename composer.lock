@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bd808/toolforge-php-mysql.git",
-                "reference": "ebdaab7b5f2aa259e92407339fd79e3f7342dcc1"
+                "reference": "420231997deca041d8c799c4c5c8c5470319bea3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bd808/toolforge-php-mysql/zipball/ebdaab7b5f2aa259e92407339fd79e3f7342dcc1",
-                "reference": "ebdaab7b5f2aa259e92407339fd79e3f7342dcc1",
+                "url": "https://api.github.com/repos/bd808/toolforge-php-mysql/zipball/420231997deca041d8c799c4c5c8c5470319bea3",
+                "reference": "420231997deca041d8c799c4c5c8c5470319bea3",
                 "shasum": ""
             },
             "require": {
@@ -60,7 +60,7 @@
                 "source": "https://github.com/bd808/toolforge-php-mysql/tree/master",
                 "issues": "https://github.com/bd808/toolforge-php-mysql/issues"
             },
-            "time": "2017-07-26T04:50:11+00:00"
+            "time": "2017-07-26T05:40:52+00:00"
         },
         {
             "name": "defuse/php-encryption",
